@@ -1,0 +1,129 @@
+/**index.wxss**/
+.indexContainer{
+  width: 100%;
+  height: 100%;
+}
+
+/* 轮播图底部导航区域 */
+.banner swiper-item {
+  width: 100%;
+  height: 300rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 轮播图底部导航区域 */
+.navContariner {
+  display: flex;
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.navContariner .navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.navContariner .navItem .iconfont {
+  padding: 20rpx;
+  border-radius: 50%;
+  font-size: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #d43c33;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.navContariner text {
+  font-size: 26rpx;
+}
+
+/* 歌曲推荐区域 */
+.recommendContainer {
+  display: flex;
+  height: 300rpx;
+  margin-bottom: 100rpx;
+}
+
+.scroll {
+  display: flex;
+  margin-top: 20rpx;
+}
+.recommendContainer .recommendItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.recommendContainer .recommendItem image {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 15rpx;
+  margin-bottom: 10rpx;
+}
+.recommendContainer .recommendItem text {
+  font-size: 26rpx;
+  /* 两行文字溢出隐藏 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 歌曲排行榜 */
+.swiperContainer {
+  display: flex;
+  height: 750rpx;
+  margin-top: 20rpx;
+}
+.swiperItem {
+  zoom: 1;
+  margin-left: 20rpx;
+}
+
+.musicRankContainer {
+  margin-bottom: 20rpx;
+}
+.swiperContent {
+  width: 92%;
+  background-color: #fbfbfb;
+}
+.swiperItem .musicRank {
+  display: flex;
+  align-items: center;
+}
+.swiperItem .title {
+  font-size: 28rpx;
+  line-height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.swiperItem  .swiperContent .musicRankContainer .musicRank .imgContainer {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+}
+.swiperItem  .swiperContent .musicRankContainer .musicRank .imgContainer image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.swiperItem .musicRank text {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+
+
+
+
+

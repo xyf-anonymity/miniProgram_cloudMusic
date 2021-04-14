@@ -1,0 +1,27 @@
+<!--pages/music/music.wxml-->
+<image class="bgImg" src="{{songsDetail.al.picUrl}}"></image>
+<view class="mask bgImg"></view>
+<view class="header">
+    <text class="author">{{songsDetail.ar[0].name}}</text>
+    <!-- 唱片指针 -->
+    <view class="needleContainer">
+        <image class="needle {{isPlay && 'musicPlay'}}" src="/static/images/song/needle.png"></image>
+        <view class="circ"></view>
+    </view>
+    <!-- 唱片 -->
+    <view class="discContainer">
+        <image class="disc {{isPlay && 'discRotate'}}" src="/static/images/song/disc.png"></image>
+        <image class="coverImg {{isPlay && 'discRotate'}}" src="{{songsDetail.al.picUrl}}"></image>
+    </view>
+</view>
+
+<!-- 底部播放选项区域 -->
+<view class="musicControl">
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+    <text class="iconfont icon-shangyishou" data-type="pre"></text>
+    <text class="iconfont {{isPlay?'icon-zanting': 'icon-bofang'}} big" bindtap="musicPlay"></text>
+    <text class="iconfont icon-next"  data-type="next"></text>
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+</view>
+
+

@@ -1,0 +1,23 @@
+/* components/headerText/headerText.wxss */
+.headerContainer {
+    zoom: 1;
+  }
+.headerContainer .headerTop{
+padding-left: 20rpx;
+font-size: 26rpx;
+color: #666;
+}
+.headerBottom {
+padding: 0 20rpx;
+padding-top: 10rpx;
+}
+.headerBottom .left {
+font-size: 30rpx;
+}
+.headerBottom .more {
+float: right;
+font-size: 20rpx;
+border: 1px solid #666;
+border-radius: 25rpx;
+padding: 8rpx 15rpx;
+}

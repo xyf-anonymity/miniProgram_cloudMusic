@@ -1,0 +1,36 @@
+<!--pages/recommend/recommend.wxml-->
+<!-- 头部图片 -->
+<view class="imgContainer">
+    <image class="recommendImg" src="/static/images/recommendSong/recommendSong.jpg"></image>
+    <text class="day">{{mouth}} / {{day}} </text>
+</view>
+
+<!-- 每日歌曲推荐列表 -->
+<view class="recommendList">
+    <view class="listHeader">
+      <text class="playAll">播放全部</text>
+      <text class="changeMore">多选</text>
+    </view>
+    <scroll-view 
+        class="scrollView"
+        enable-flex 
+        scroll-y
+    >
+        <view
+            class="scrollItem"
+            wx:for="{{recommendMusicData}}"
+            wx:key="id"
+            bindtap="toPlayMusic"
+            id="{{item.id}}"
+        >
+            <image class="musicImg" src="{{item.al.picUrl}}"></image>
+            <view class="musicContent">
+                <text class="songName">{{item.name}}</text>
+                <text class="songAuthor">{{item.ar[0].name}}</text>
+            </view>
+            <view class="radio">
+                <text class="iconfont icon-gengduo"></text>
+            </view>
+        </view>
+    </scroll-view>
+</view>

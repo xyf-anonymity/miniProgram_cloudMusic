@@ -1,0 +1,79 @@
+<!--pages/video/video.wxml-->
+<!-- 顶部搜索 -->
+<view class="searchContainer">
+    <image src="/static/images/logo.png"></image>
+    <view class="search"><input placeholder="不再联系" placeholder-class="placeholder" type="text" /></view>
+    <image src="/static/images/video/video.jpg"></image>
+</view>
+
+<!-- 视频标签列表 -->
+<scroll-view 
+    class="videoGroupList"
+    scroll-x
+    enable-flex
+    scroll-with-animation="true"
+    scroll-into-view="{{'scroll' + labelId}}"
+    paging-enabled
+>
+    <view class="scrollContainer" >
+        <view 
+            class="labelContainer {{labelId === item.id ? 'active' : ''}}" 
+            wx:for="{{videoLabel}}" 
+            wx:key="id"
+            bindtap="handleLabel"
+            id="{{'scroll' + item.id}}"
+            data-id="{{item.id}}"
+        >
+            <text class="label">{{item.name}}</text>
+        </view>
+    </view>
+</scroll-view>
+
+<!-- 视频标签/分类下的视频列表 -->
+<scroll-view 
+    class="videoGroupScroll"
+    scroll-Y
+    enable-flex
+    refresher-enabled
+    bindrefresherrefresh="handleRefresherRefresh"
+    refresher-triggered="{{refresherTrigger}}"
+>
+    <view class="videoGroupContainer">
+        <view class="videoContainer" wx:for="{{videoData}}" wx:key="vid">
+            <video 
+                class="videoItem common" 
+                wx:if="{{item.vid===vid}}" 
+                data-vid="{{item.vid}}"
+                src="{{videoUrl}}" 
+                show-center-play-btn
+                enable-play-gesture
+                enable-auto-rotation
+                autoplay
+                initial-time="{{videoPlayMemoryTime}}"
+                poster="{{item.coverUrl}}"
+                object-fit="fill"
+                bindtimeupdate="handleBindtimeupdate"
+            >
+            </video>
+            <image bindtap="handlePlay" wx:else id="{{item.vid}}"  class="coverImg common" src="{{item.coverUrl}}"></image>
+            <view class="content">{{item.title}}</view>
+            <view class="footer">
+                <image class="avatar" src="{{item.creator.avatarUrl}}"></image>
+                <text class="nickName">{{item.creator.nickname}}</text>
+                <view class="comments_praised">
+                <text class="item">
+                    <text class="iconfont icon-buoumaotubiao15"></text>
+                    <text class="count">{{item.praisedCount}}</text>
+                </text>
+                <text class="item">
+                    <text class="iconfont icon-pinglun1"></text>
+                    <text class="count">{{item.commentCount}}</text>
+                </text>
+                <button open-type="share" class="item btn">
+                    <text class="iconfont icon-gengduo"></text>
+                </button>
+                </view>
+            </view>
+        </view> 
+    </view>
+</scroll-view>

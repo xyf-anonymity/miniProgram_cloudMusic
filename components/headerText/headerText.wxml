@@ -1,0 +1,9 @@
+<!--components/headerText/headerText.wxml-->
+<!-- 头部标题组件 -->
+<view class="headerContainer">
+    <view class="headerTop">{{title}}</view>
+    <view class="headerBottom">
+        <text class="left">{{subheader}}</text>
+        <text class="more">查看更多</text>
+    </view>
+</view>
