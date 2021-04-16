@@ -113,7 +113,7 @@ Page({
   //点击去每日推荐页
   toRecommend() {
     wx.navigateTo({
-      url:"/pages/recommend/recommend"
+      url:"/recommendSongs/pages/recommend/recommend"
     })
   }
 

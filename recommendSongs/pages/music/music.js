@@ -1,5 +1,5 @@
 // pages/music/music.js
-import http from '../../utils/http'
+import http from '../../../utils/http'
 import PubSub from 'pubsub-js'
 import moment from 'moment'
 let appData = getApp()

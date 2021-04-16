@@ -1,5 +1,5 @@
 // pages/recommend/recommend.js
-import http from '../../utils/http'
+import http from '../../../utils/http'
 import PubSub from 'pubsub-js'
 Page({
 
@@ -21,7 +21,7 @@ Page({
       index:e.currentTarget.dataset.index
     })
     wx.navigateTo({
-      url:"/pages/music/music?musicId=" + e.currentTarget.id
+      url:"/recommendSongs/pages/music/music?musicId=" + e.currentTarget.id
     })
   },
   /**

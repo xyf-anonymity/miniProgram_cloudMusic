@@ -4,9 +4,7 @@
     "pages/video/video",
     "pages/personal/personal",
     "pages/login/login",
-    "pages/logs/logs",
-    "pages/recommend/recommend",
-    "pages/music/music"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,5 +43,21 @@
   "requiredBackgroundModes": [
     "audio",
     "location"
-  ]
+  ],
+  "subpackages":[
+    {
+      "name":"recommendSongs",
+      "root":"recommendSongs",
+      "pages": [
+        "pages/recommend/recommend",
+        "pages/music/music"
+      ]
+    }
+  ],
+  "preloadRule":{
+    "pages/index/index":{
+      "network": "all",
+      "packages": ["recommendSongs"]
+    }
+  }
 }
