@@ -15,12 +15,23 @@
     </view>
 </view>
 
+<!-- 音乐播放进度条 -->
+<view class="musicProgressContainer">
+    <text class="musicTime">{{currentTime}}</text>
+    <view class="musicProgress">
+        <view class="currentProgress" style="width:{{currentProgressWidth}}rpx">
+            <view class="circle"></view>
+        </view>
+    </view>
+    <view class="musicTime">{{duration}}</view>
+</view>
+
 <!-- 底部播放选项区域 -->
 <view class="musicControl">
     <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
-    <text class="iconfont icon-shangyishou" data-type="pre"></text>
+    <text class="iconfont icon-shangyishou" data-type="pre" bindtap="switchMusic"></text>
     <text class="iconfont {{isPlay?'icon-zanting': 'icon-bofang'}} big" bindtap="musicPlay"></text>
-    <text class="iconfont icon-next"  data-type="next"></text>
+    <text class="iconfont icon-next"  data-type="next" bindtap="switchMusic"></text>
     <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
 </view>
 

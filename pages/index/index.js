@@ -101,6 +101,16 @@ Page({
     })
   },
 
+
+  // 点击去播放歌曲
+  toPlayMusic: function (e) {
+    console.log(e.currentTarget.id)
+   /*  wx.navigateTo({
+      url:"/pages/music/music?musicId=" + e.currentTarget.id
+    }) */
+  },
+
+  //点击去每日推荐页
   toRecommend() {
     wx.navigateTo({
       url:"/pages/recommend/recommend"

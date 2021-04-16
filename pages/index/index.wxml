@@ -65,7 +65,14 @@
       <swiper-item class="swiperItem" wx:for="{{musicRanks}}" wx:key="id">
         <view class="swiperContent">
           <view class="title">{{item.name}}></view>
-          <view class="musicRankContainer" wx:for="{{item.tracks}}"  wx:for-item="RankItem" wx:key="id">
+          <view 
+            class="musicRankContainer" 
+            wx:for="{{item.tracks}}"  
+            wx:for-item="RankItem" 
+            wx:key="id"
+            bindtap="toPlayMusic"
+            id="{{RankItem.id}}"
+          >
             <view class="musicRank">
               <view class="imgContainer">
                 <image src="{{RankItem.picUrl}}"></image>

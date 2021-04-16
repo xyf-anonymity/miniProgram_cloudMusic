@@ -12,6 +12,7 @@
     backdrop-filter: blur(6rpx);
     backdrop-filter:satuate(150%);
 }
+/* 磨砂玻璃遮罩层 */
 .mask {
     position: fixed;
     z-index: -9;
@@ -27,6 +28,8 @@
 }
 
 .header .author {
+    display: block;
+    height: 40rpx;
     color: #fff;
 }
 
@@ -61,6 +64,47 @@
     transform: rotate(-25deg);
     transition: transform 1s linear;
 }
+
+/* 音乐播放进度条 */
+.musicProgressContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80rpx;
+}
+.musicProgressContainer .musicProgress {
+    position: relative;
+    width: 360rpx;
+    height: 6rpx;
+    background-color: #fff;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+/* 播放进度 */
+.musicProgressContainer .musicProgress .currentProgress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #d43c33;
+}
+.musicProgressContainer .musicProgress .currentProgress .circle {
+    box-sizing: border-box;
+    position: absolute;
+    top: -6rpx;
+    right: -9rpx;
+    width: 18rpx;
+    height: 18rpx;
+    border-radius: 50%;
+    border: 1rpx solid #d43c33;
+    background-color: #fff;
+}
+
+.musicProgressContainer .musicTime {
+    color: #fff!important;
+    font-size: 28rpx;
+}
+
 /* 唱片 */
 .discContainer {
     position: relative;
